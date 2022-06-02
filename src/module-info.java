@@ -6,4 +6,9 @@ module app.calculo {
 	exports br.com.cod3r.app.calculo.interno
 		to app.financeiro; // to ele indica explisitamente que sera exportado.
 	opens br.com.cod3r.app.calculo;
+	
+	requires app.api;
+	provides br.com.cod3r.app.Calculadora // Caminho absoluto
+		with br.com.cod3r.app.calculo.Calculadoraimpl;// Caminho absoluto
+	
 }
