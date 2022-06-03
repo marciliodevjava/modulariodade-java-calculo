@@ -3,12 +3,12 @@ module app.calculo {
 	exports br.com.cod3r.app.calculo;
 	requires app.logging;// Herança transmitida pelo pai
 	
-	exports br.com.cod3r.app.calculo.interno
-		to app.financeiro; // to ele indica explisitamente que sera exportado.
+//	exports br.com.cod3r.app.calculo.interno
+//		to app.financeiro; // to ele indica explisitamente que sera exportado.
 	opens br.com.cod3r.app.calculo;
 	
 	requires app.api;
-	provides br.com.cod3r.app.Calculadora // Caminho absoluto
+	provides br.com.cod3r.app.Calculadora // Caminho absoluto // prover o caminho da Calculadora
 		with br.com.cod3r.app.calculo.Calculadoraimpl;// Caminho absoluto
 	
 }
